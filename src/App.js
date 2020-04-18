@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Cards from "./Cards"
+import Rajya from "./Rajya"
+import styles from "./App.module.css"
+import Details from "./Details"
+import Details1 from "./Details1"
+import Header from "./Header"
+import Prevent from"./Prevent"
+import Footer from "./Footer"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    render(){
+        return(
+            <div>
+                <div classname={styles.card}>
+                    <Header classname={styles.card}/>
+                    <Details/>
+                    <Prevent/>
+                    <Details1/>
+                    <Footer/>
+                </div>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App; 
