@@ -3,11 +3,9 @@ import React from "react"
 class All extends React.Component{    
     
     render(){
-        const {sumary}= this.props;
-
         return(
             <div className="container mt-3">
-                <h3 className="text-danger">{sumary.state}</h3>
+                <h3 className="text-danger">{this.props.state}</h3>
             <table class="table">
                 <thead>
                     <tr>
@@ -18,9 +16,9 @@ class All extends React.Component{
                 </thead>
                 <tbody>
                     <tr>
-                    <td>{sumary.confirmed}</td>
-                    <td>{sumary.recovered}</td>
-                    <td>{sumary.deaths}</td>
+                    <td>{this.props.confirmed}</td>
+                    <td>{this.props.recovered}</td>
+                    <td>{this.props.deaths}</td>
                     </tr>
                 </tbody>
                 </table>
